@@ -1,13 +1,11 @@
 package com.grouptwo.ustcdiary.main.topics;
-
-import com.grouptwo.ustcdiary.main.topics.ITopic;
 import com.grouptwo.ustcdiary.R;
 
 /**
  * Created by daxia on 2016/10/17.
  */
 
-public class Contacts implements ITopic {
+public class Memo implements ITopic {
 
     private String title;
     private long id;
@@ -15,11 +13,12 @@ public class Contacts implements ITopic {
     private int color;
     private boolean pinned = false;
 
-    public Contacts(long id, String title, int color) {
+    public Memo(long id, String title, int color) {
         this.id = id;
         this.title = title;
         this.color = color;
     }
+
 
     @Override
     public long getId() {
@@ -38,12 +37,12 @@ public class Contacts implements ITopic {
 
     @Override
     public int getType() {
-        return TYPE_CONTACTS;
+        return TYPE_MEMO;
     }
 
     @Override
     public int getIcon() {
-        return R.drawable.contact;
+        return R.drawable.memory;
     }
 
     @Override
@@ -55,7 +54,6 @@ public class Contacts implements ITopic {
     public long getCount() {
         return count;
     }
-
 
     @Override
     public int getColor() {
@@ -77,3 +75,4 @@ public class Contacts implements ITopic {
         return pinned;
     }
 }
+
