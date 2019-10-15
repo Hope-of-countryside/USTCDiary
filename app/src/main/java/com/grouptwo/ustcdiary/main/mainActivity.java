@@ -1,8 +1,10 @@
-package com.grouptwo.ustcdiary;
+package com.grouptwo.ustcdiary.main;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.grouptwo.ustcdiary.R;
 
 public class mainActivity extends AppCompatActivity {
 

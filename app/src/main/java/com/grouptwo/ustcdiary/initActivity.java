@@ -6,6 +6,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 
+import com.grouptwo.ustcdiary.main.mainActivity;
+
 public class initActivity extends AppCompatActivity {
 
     private Handler initHandler;
@@ -34,7 +36,7 @@ public class initActivity extends AppCompatActivity {
     public class goToMain implements Runnable{
         @Override
         public void run() {
-            Intent goToMain = new Intent(initActivity.this,mainActivity.class);
+            Intent goToMain = new Intent(initActivity.this, mainActivity.class);
             startActivity(goToMain);
         }
     }
