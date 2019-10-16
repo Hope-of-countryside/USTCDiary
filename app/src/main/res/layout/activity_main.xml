@@ -3,7 +3,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/activity_main">
+    android:id="@+id/activity_main"
+    android:background="#FFFFFF">
 
     <!--<Button-->
         <!--android:layout_width="wrap_content"-->
@@ -38,7 +39,7 @@
             android:textSize="30dp"
             android:layout_gravity="center"
             android:layout_marginLeft="20dp"
-            android:textColor="#FAFAFA"
+            android:textColor="#0A0101"
             />
 
         <ImageView
@@ -49,24 +50,19 @@
             android:layout_marginLeft="100dp"
             android:src="@drawable/setting" />
     </LinearLayout>
-    <!--<android.support.v7.widget.RecyclerView-->
-        <!--android:id="@+id/RecyclerView_topic"-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="match_parent"-->
-        <!--android:layout_below="@id/activity_main_top"-->
-        <!--android:background="#FFFDFD"-->
-        <!--android:paddingBottom="10dp"-->
-        <!--android:paddingTop="10dp" />-->
-    <androidx.recyclerview.widget.RecyclerView
+
+    <ListView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@+id/activity_main_top"
-        android:id="@+id/recyclerview"
+        android:id="@+id/listview"
         android:paddingBottom="10dp"
-        android:paddingTop="10dp"
+        android:dividerHeight="1px"
+        android:divider="#000000"
+
         >
 
-    </androidx.recyclerview.widget.RecyclerView>
+    </ListView>
 
 
 
