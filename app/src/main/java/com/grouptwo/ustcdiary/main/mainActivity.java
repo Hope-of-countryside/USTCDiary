@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 
 import com.grouptwo.ustcdiary.R;
@@ -16,9 +17,13 @@ import com.grouptwo.ustcdiary.topicActivity.memoryActivity;
 import java.util.ArrayList;
 import java.util.List;
 
-public class mainActivity extends AppCompatActivity {
+public class mainActivity extends AppCompatActivity implements View.OnClickListener {
 
+    //ListView嵌入的内容
     private List<Topic> topicList = new ArrayList<>();
+    //mainActivity上方的线性布局
+    private LinearLayout activityMainTop;
+
 
 
     @Override
@@ -33,19 +38,12 @@ public class mainActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 Topic topic = topicList.get(i);
-                switch(topic.getName()){
-                    case "contact":
-                        startActivity(new Intent(mainActivity.this, contactActivity.class));
-                        break;
-                    case "diary":
-                        startActivity(new Intent(mainActivity.this, diaryActivity.class));
-                        break;
-                    case "memory":
-                        startActivity(new Intent(mainActivity.this, memoryActivity.class));
-                        break;
+                goToWhichActivity(topic);
                 }
             }
-        });
+        );
+        activityMainTop = (LinearLayout) findViewById(R.id.activity_main_top);
+        activityMainTop.setOnClickListener(this);
     }
 
     private void initTopic(){
@@ -56,4 +54,30 @@ public class mainActivity extends AppCompatActivity {
         topicList.add(diary);
         topicList.add(memory);
     }
+    //选择去哪个活动
+    private void goToWhichActivity(Topic topic){
+        switch(topic.getName()){
+            case "contact":
+                startActivity(new Intent(mainActivity.this, contactActivity.class));
+                break;
+            case "diary":
+                startActivity(new Intent(mainActivity.this, diaryActivity.class));
+                break;
+            case "memory":
+                startActivity(new Intent(mainActivity.this, memoryActivity.class));
+                break;
+        }
+    }
+
+    //上侧点击事件监听，实现名字和图片的修改
+
+    @Override
+    public void onClick(View view) {
+        switch(view.getId()){
+            case R.id.activity_main_top:
+
+
+        }
+    }
 }
+

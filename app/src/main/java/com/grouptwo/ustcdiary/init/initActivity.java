@@ -1,4 +1,4 @@
-package com.grouptwo.ustcdiary;
+package com.grouptwo.ustcdiary.init;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 
+import com.grouptwo.ustcdiary.R;
 import com.grouptwo.ustcdiary.main.mainActivity;
 
 public class initActivity extends AppCompatActivity {
@@ -22,7 +23,6 @@ public class initActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
-
         initHandler.postDelayed(new goToMain(),initTime);
 
     }
@@ -30,6 +30,7 @@ public class initActivity extends AppCompatActivity {
     @Override
     protected void onPause() {
         super.onPause();
+        initHandler.removeCallbacksAndMessages(null);
 
     }
 
@@ -38,6 +39,7 @@ public class initActivity extends AppCompatActivity {
         public void run() {
             Intent goToMain = new Intent(initActivity.this, mainActivity.class);
             startActivity(goToMain);
+            finish();
         }
     }
 }
