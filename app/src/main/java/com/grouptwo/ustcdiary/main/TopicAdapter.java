@@ -34,3 +34,4 @@ public class TopicAdapter extends ArrayAdapter <Topic>{
         return view;
     }
 }
+///test
