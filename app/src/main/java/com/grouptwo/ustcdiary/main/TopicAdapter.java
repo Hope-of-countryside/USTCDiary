@@ -31,7 +31,13 @@ public class TopicAdapter extends ArrayAdapter <Topic>{
         TextView topicName = (TextView) view.findViewById(R.id.topic_name);
         topicImage.setImageResource(topic.getImageId());
         topicName.setText(topic.getName());
+        test();
         return view;
+    }
+    public void test(){
+
     }
 }
 ///test
+///sdasda
+///dsfsdf
