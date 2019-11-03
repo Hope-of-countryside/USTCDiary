@@ -3,15 +3,18 @@
     package="com.grouptwo.ustcdiary">
 
     <application
+        android:name=".topicActivity.contact.MyApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".topicActivity.memoryActivity"></activity>
+        <activity android:name=".topicActivity.contact.FindActivity"></activity>
+        <activity android:name=".topicActivity.memoryActivity" />
         <activity android:name=".topicActivity.diaryActivity" />
-        <activity android:name=".topicActivity.contactActivity" />
+        <activity android:name=".topicActivity.contact.contactActivity" />
+        <activity android:name=".topicActivity.contact.AddData" />
         <activity
             android:name=".main.mainActivity"
             android:theme="@style/Theme.AppCompat.NoActionBar" />

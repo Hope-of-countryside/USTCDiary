@@ -10,7 +10,7 @@ import android.widget.LinearLayout;
 import android.widget.ListView;
 
 import com.grouptwo.ustcdiary.R;
-import com.grouptwo.ustcdiary.topicActivity.contactActivity;
+import com.grouptwo.ustcdiary.topicActivity.contact.contactActivity;
 import com.grouptwo.ustcdiary.topicActivity.diaryActivity;
 import com.grouptwo.ustcdiary.topicActivity.memoryActivity;
 
